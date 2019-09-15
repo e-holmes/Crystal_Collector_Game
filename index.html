@@ -10,12 +10,12 @@
     <body>
         <div class="container">
             <section class="row">
-                <article class="box col-6  justify-content-start">
+                <article class="col-6 box head">
                     Magic Gather!
                 </article>
             </section>
             <section class="row">
-                <p class="box col-8 justify-content-start">
+                <p class="box col-6 flex-fill">
                     Oh no! I ran out of magic! Can you help me gather some?
                     <br>
                     There are four crystals below. Each crystal will only give a certain amount of magic when you click it.
@@ -26,23 +26,37 @@
                     <br>
                     The crystals will give a different amount of magic for each spell!
                 </p>
+                <img class="col-4 witch" src="assets/images/witch.png" alt="Witch">
             </section>
-            <section class="row">
-                <article class="col-4">
+
+            <section class="row cont">
+
+                <img class="col-3" src="assets/images/grimoire.png" alt="Grimoire" sty;e="width:100%;">
+                <div id="magic" class="box center">
                     <!-- Log Magic Goal -->
+                </div>
+                
+                <article id="wins" class=" center box col-2 p-2 flex-shrink-1 bd-highlight">
+                    <!-- Logs Wins -->
                 </article>
-                <article class="col-2">
-                    <!-- Log Wins & Losses -->
+                
+                <article id="losses" class="center box col-2 p-2 flex-shrink-1 bd-highlight">
+                    <!-- Log Losses -->
                 </article>
             </section>
+
+
             <section class="row">
                 <article>
                     <!-- Crystals -->
-                    <img id="gem1"class="col-2" src="assets/images/tester_gem.png" alt="Tester_Gem">
+                    <img id="gem1"class="col-2 gems" src="assets/images/gem_1.png" alt="Gem_1">
+                    <img id="gem2"class="col-2 gems" src="assets/images/gem_2.png" alt="Gem_2">
+                    <img id="gem3"class="col-2 gems" src="assets/images/gem_3.png" alt="Gem_3">
+                    <img id="gem4"class="col-2 gems" src="assets/images/gem_4.png" alt="Gem_4">
                 </article>
             </section>
             <section class="row">
-                <article class=col-4>
+                <article id="score" class="center box col-4">
                     <!-- Log User Magic -->
                 </article>
             </section>
