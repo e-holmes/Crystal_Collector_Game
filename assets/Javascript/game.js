@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var magic;
-    var wins;
-    var losses;
+    var wins = 0;
+    var losses = 0;
     var gem1;
     var gem2;
     var gem3;
@@ -11,26 +11,53 @@ $(document).ready(function(){
 
     reset();
 
+    $("#gem1").click(function(){
+        userMagic= userMagic +gem1;
+        console.log("User Magic: " +userMagic);
+        check();
+      });
+
+      $("#gem2").click(function(){
+        userMagic= userMagic +gem2;
+        console.log("User Magic: " +userMagic);
+        check();
+      });
+
+      $("#gem3").click(function(){
+        userMagic= userMagic +gem3;
+        console.log("User Magic: " +userMagic);
+        check();
+      });
+
+      $("#gem4").click(function(){
+        userMagic= userMagic +gem4;
+        console.log("User Magic: " +userMagic);
+        check();
+      });
+
+
+
     function reset(){
         // New Variables
-        var i;
-        var gemNum = [];
+            var i;
+            var gemNum = [];
 
         // Updated Variables
-        userMagic = 0;
-        magic = Math.floor(Math.random() *120)+19;
-        console.log("Magic: " +magic);
+            userMagic = 0;
+            $("#score").text("User Magic: " +userMagic);
+            magic = RndNum(19, 120)
+            console.log("Magic: " +magic);
+            $("#magic").text("Magic: " +magic);
+            
+        // Setting Score 
+            $("#wins").text("Wins: " +wins);
+            $("#losses").text("Losses: " +losses);
 
-
-        
-        
-        // Code for Setting Gems
+            // Code for Setting Gems
             for (i=1; i<13; i++){
                 gemNum.push(i);
             }
             console.log("Gem Array: " +gemNum);
-
-            
 
             // Gem 1
             i=Math.floor(Math.random() *gemNum.length);
@@ -62,10 +89,27 @@ $(document).ready(function(){
                 // Remove array gemNum item i
                 gemNum.splice(i, 1);
                 // Console log updated array
-                // console.log("Gem Array Updated: " +gemNum); 
+                //("Gem Array Updated: " +gemNum); 
         }
     }
 
+    function check(){
+        if (userMagic == magic){
+            wins++;
+            console.log("Wins: " +wins);
+            reset();
+        } else if (userMagic > magic){
+            losses++;
+            console.log("Losses: " +losses);
+            reset();
+        } else{
+            $("#score").text("User Magic: " +userMagic);
+        }
+    }
+
+    function RndNum(min, max) {
+        return Math.floor(Math.random() * (max - min) ) + min;
+      }
     
 
 

@@ -1,12 +1,45 @@
 .box{
-    background-color: blueviolet;
+   color: blueviolet;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 20px;
+   font-weight: bold;
+   background-image: url("../images/sheer.png");
 }
 
 body{
-    background-image: ;
+    background-image: url("../images/stars.gif");
     margin:0px;
 }
 .container{
     margin-left:2%;
     margin-top:2%;
+}
+
+.gems{
+    border: solid 5px white;
+}
+
+.head{
+    text-align: center;
+    font-size:40px;
+}
+
+.center{
+    text-align: center;
+    font-size:30px;
+}
+
+.magic{
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont{
+    position: relative;
 }
